@@ -1,0 +1,30 @@
+{
+  "name": "gulp-warnlog",
+  "version": "0.0.1",
+  "description": "A plugin that check if you left debug code",
+  "main": "index.js",
+  "dependencies": {
+    "event-stream": "~3.0.18",
+    "colors": "~0.6.2"
+  },
+  "devDependencies": {
+    "should": "~2.1.1",
+    "mocha": "~1.15.1",
+    "gulp-util": "~2.0.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "keywords": [
+    "gulpplugin",
+    "console log warning"
+  ],
+  "author": "Pachito Marco Calabrese <pm.calabrese@gmail.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": ""
+  },
+  "engines": {
+    "node": ">=0.8"
+  }
+}
