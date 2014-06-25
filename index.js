@@ -3,7 +3,7 @@ var colors = require('colors');
 
 module.exports = function(subString) {
 
-  var defaultSubstrings = ["console","$log"];
+  var defaultSubstrings = ["console.log","$log"];
   var substrings = defaultSubstrings.concat(subString)
 
   /** Function count the occurrences of substring in a string;
@@ -11,7 +11,7 @@ module.exports = function(subString) {
    * @param {String} subString    Required. The string to search for;
    * @param {Boolean} allowOverlapping    Optional. Default: false;
    */
-  function occurrences(file){
+  function occurrences(file, subString2, allowOverlapping){
 
       // file.contents = new Buffer(String(file.contents).toString());
       var string = file.contents.toString();
@@ -21,6 +21,7 @@ module.exports = function(subString) {
       for (var i = substrings.length - 1; i >= 0; i--) {
         if(substrings[i].length<=0) return string.length+1;
         var n=0, pos=0;
+        var step=(allowOverlapping)?(1):(substrings[i].length);
         while(true){
             pos=string.indexOf(substrings[i],pos);
             if(pos>=0){ n++; pos+=step; } else break;
