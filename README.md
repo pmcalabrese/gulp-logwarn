@@ -32,3 +32,4 @@ it will produce as output
 - tests
 - add to bower
 - clean up the code
+- add the source line where the debug code is left
