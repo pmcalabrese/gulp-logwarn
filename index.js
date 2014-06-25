@@ -6,11 +6,6 @@ module.exports = function(subString) {
   var defaultSubstrings = ["console.log","$log"];
   var substrings = defaultSubstrings.concat(subString)
 
-  /** Function count the occurrences of substring in a string;
-   * @param {String} string   Required. The string;
-   * @param {String} subString    Required. The string to search for;
-   * @param {Boolean} allowOverlapping    Optional. Default: false;
-   */
   function occurrences(file){
 
       // file.contents = new Buffer(String(file.contents).toString());
