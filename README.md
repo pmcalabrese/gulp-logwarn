@@ -3,6 +3,13 @@ gulp-logwarn
 
 A configurable gulp plugin that warns you if you left debug code
 
+## Install
+
+Use npm for install the package
+
+```javascript
+npm install gulp-logwarn
+```
 
 ## How it works
 In your gulpfile.js import gulp-logwarn and call it in a pipe ```logwarn([])```. If you want, you can extend the strings to be checked by passing an array of strings as argument to logwarn ,something like ```logwarn(["console.debug","$log.info"])```
@@ -30,6 +37,5 @@ it will produce as output
 ## TODO
 
 - tests
-- add to bower
 - clean up the code
 - add the source line where the debug code is left
