@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/username/repository.git"
+    "url": "git@github.com:pmcalabrese/gulp-logwarn.git"
   },
   "engines": {
     "node": ">=0.8"
