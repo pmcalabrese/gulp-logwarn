@@ -17,7 +17,9 @@
   },
   "keywords": [
     "gulpplugin",
-    "console log warning"
+    "console log warning",
+    "check debug code",
+    "configurable plugin"
   ],
   "author": "Pachito Marco Calabrese <pm.calabrese@gmail.com>",
   "license": "BSD",
