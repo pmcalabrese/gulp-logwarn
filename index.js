@@ -12,25 +12,28 @@ module.exports = function(subString) {
       if (file.isNull()) {
          // Do nothing if no contents
       }
-      
+
       if (file.isBuffer()) {
         var string = file.contents.toString();
+        string = string.toString('utf8').split(/\r\n|[\n\r\u0085\u2028\u2029]/g);
         var message = "";
         var m = 0;
+        var n=0, pos=0;
+        var sc = 0;
+        while(sc < string.length){
+          for (var i = substrings.length - 1; i >= 0; i--) {
+            var step=substrings[i].length;
 
-        for (var i = substrings.length - 1; i >= 0; i--) {
-          if(substrings[i].length<=0) return string.length+1;
-          var n=0, pos=0;
-          var step=substrings[i].length;
-          while(true){
-              pos=string.indexOf(substrings[i],pos);
-              if(pos>=0){ n++; pos+=step; } else break;
-          }
-          m = m + n;
-          if (n > 0) {
-            message =  message + "    "+ n + " " + "'" + substrings[i] + "'" + ",\n";
+            pos=string[sc].indexOf(substrings[i],pos);
+            if(pos>=0){
+              n++; pos+=step;
+              message = message + "    "+ "["+(sc+1)+"] "+ substrings[i] + " ,\n";
+            };
           };
-        };
+          sc++;
+        }
+        m = m + n;
+
         var finalMessage = file.path+" ("+m+")\n" + message;
         if (m === 0) {
           console.log(finalMessage.green);
@@ -40,8 +43,8 @@ module.exports = function(subString) {
         message = "";
 
         return n;
-      }      
-      
+      }
+
   }
 
   return es.map(occurrences);
