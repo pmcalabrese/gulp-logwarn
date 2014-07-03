@@ -3,8 +3,10 @@ var colors = require('colors');
 
 module.exports = function(subString) {
 
+  var subString = typeof subString === "undefined" ? [] : subString;
   var defaultSubstrings = ["console.log","$log"];
   var substrings = defaultSubstrings.concat(subString)
+  console.log("subString: ",substrings);
 
   function occurrences(file){
 
@@ -26,7 +28,7 @@ module.exports = function(subString) {
 
             pos=string[sc].indexOf(substrings[i],pos);
             if(pos>=0){
-              n++; pos+=step;
+              n++;
               message = message + "    "+ "["+(sc+1)+"] "+ substrings[i] + " ,\n";
             };
           };
