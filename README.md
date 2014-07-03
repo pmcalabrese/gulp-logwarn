@@ -40,4 +40,3 @@ run it with ```gulp logwarn``` and it will produce as output
 
 - tests
 - clean up the code
-- add the source line where the debug code is left
