@@ -28,8 +28,18 @@ var appJs = [
 
 gulp.task('logwarn', function(){
   gulp.src(appJs)
-    .pipe(logwarn([]));
+    .pipe(logwarn());
 });
+
+...
+
+// if you want to extend you can pass an array so...
+
+gulp.task('logwarn', function(){
+	gulp.src(appJs)
+		.pipe(logwarn(['console.debug,console.dir']));
+});
+
 ```
 
 run it with ```gulp logwarn``` and it will produce as output
