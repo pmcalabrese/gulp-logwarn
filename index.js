@@ -41,10 +41,8 @@ module.exports = function(subString) {
           console.log(finalMessage.red);
         }
         message = "";
-
         return n;
       }
-
   }
 
   return es.map(occurrences);
