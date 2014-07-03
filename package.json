@@ -1,6 +1,6 @@
 {
   "name": "gulp-logwarn",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A plugin that check if you left debug code",
   "main": "index.js",
   "dependencies": {
