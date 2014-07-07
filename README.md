@@ -1,7 +1,6 @@
-[![NPM](https://nodei.co/npm/gulp-logwarn.png?downloads=true)](https://nodei.co/npm/gulp-logwarn/)
-
 gulp-logwarn
 ============
+[![NPM](https://nodei.co/npm/gulp-logwarn.png?downloads=true)](https://nodei.co/npm/gulp-logwarn/)
 
 A configurable gulp plugin that warns you if you left debug code
 
