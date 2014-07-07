@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/gulp-logwarn.png?downloads=true)](https://nodei.co/npm/gulp-logwarn/)
+
 gulp-logwarn
 ============
 
