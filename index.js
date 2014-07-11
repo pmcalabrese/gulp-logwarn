@@ -6,7 +6,6 @@ module.exports = function(subString) {
   var subString = typeof subString === "undefined" ? [] : subString;
   var defaultSubstrings = ["console.log","$log"];
   var substrings = defaultSubstrings.concat(subString)
-  console.log("subString: ",substrings);
 
   function occurrences(file){
 
