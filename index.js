@@ -6,8 +6,9 @@ module.exports = function(subString) {
   var subString = typeof subString === "undefined" ? [] : subString;
   var defaultSubstrings = ["console.log","$log"];
   var substrings = defaultSubstrings.concat(subString)
+  console.log("subString: ",substrings);
 
-  function occurrences(file){
+  function occurrences(file,cb){
 
       // file.contents = new Buffer(String(file.contents).toString());
       if (file.isNull()) {
@@ -42,9 +43,10 @@ module.exports = function(subString) {
           console.log(finalMessage.red);
         }
         message = "";
-        return n;
+        cb(null,file);
       }
   }
 
   return es.map(occurrences);
+
 };
