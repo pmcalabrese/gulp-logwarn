@@ -1,7 +1,7 @@
 var es = require('event-stream');
 var colors = require('colors');
 
-module.exports = function(subString) {
+module.exports = function(subString, opt) {
 
   var subString = typeof subString === "undefined" ? [] : subString;
   var defaultSubstrings = ["console.log","$log"];
@@ -38,7 +38,9 @@ module.exports = function(subString) {
 
         var finalMessage = file.path+" ("+m+")\n" + message;
         if (m === 0) {
-          console.log(finalMessage.green);
+          if (opt.logLevel === 'info') {
+            console.log(finalMessage.green);
+          }
         } else {
           console.log(finalMessage.red);
         }
