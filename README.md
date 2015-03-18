@@ -46,7 +46,7 @@ gulp.task('logwarn', function(){
 gulp.task('logwarn', function(){
 	gulp.src(appJs)
 		.pipe(logwarn(['console.debug,console.dir'], {
-			logWarn: 'warn' // or 'info'
+			logLevel: 'warn' // or 'info'
 		}));
 });
 
