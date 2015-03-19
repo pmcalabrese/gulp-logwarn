@@ -13,7 +13,7 @@ npm install gulp-logwarn
 ```
 
 ## How it works
-In your gulpfile.js import gulp-logwarn and call it in a pipe ```logwarn()```. If you want, you can extend the strings to be checked by passing an array of strings as argument to logwarn ,something like ```logwarn(["console.debug","$log.info","DEBUG"])```
+In your gulpfile.js import gulp-logwarn and call it in a pipe `logwarn()`. If you want, you can extend the strings to be checked by passing an array of strings as argument to logwarn, something like `logwarn(["console.debug","$log.info","DEBUG"])`. You can also pass in an [options](#options) object to change the logging level like `logwarn(["console.debug"], {logLevel:"warn"})`.
 
 in the gulpfile.js
 ```javascript
@@ -41,11 +41,26 @@ gulp.task('logwarn', function(){
 		.pipe(logwarn(['console.debug,console.dir']));
 });
 
+// If you want to change the log level you can pass an object like so
+
+gulp.task('logwarn', function(){
+	gulp.src(appJs)
+		.pipe(logwarn(['console.debug,console.dir'], {
+			logLevel: 'warn' // or 'info'
+		}));
+});
+
 ```
 
 run it with ```gulp logwarn``` and it will produce as output
 
 ![alt tag](https://raw.githubusercontent.com/pmcalabrese/gulp-logwarn/master/console.png)
+
+## Options
+
+### `logLevel`
+
+Set `logLevel` to either `'warn'` or `'info'` to change what gets printed to the console. Using `'warn'` will only print messages for files that contain a `console.log`, whereas using `'info'` will print information for all files passed in regardless of whether there are any `console.log`s in that file.
 
 ## TODO
 
