@@ -19,6 +19,8 @@ in the gulpfile.js
 ```javascript
 var logwarn = require('gulp-logwarn');
 
+var strings = ["console.log","$log"];
+
 var appJs = [
 	'js/app.js',
 	'js/services.js',
@@ -29,7 +31,7 @@ var appJs = [
 
 gulp.task('logwarn', function(){
   gulp.src(appJs)
-    .pipe(logwarn());
+    .pipe(logwarn(strings));
 });
 
 ...
