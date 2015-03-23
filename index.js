@@ -35,7 +35,7 @@ module.exports = function(subString, opt) {
 
         var finalMessage = file.path+" ("+m+")\n" + message;
         if (m === 0) {
-          if (opt.logLevel === 'info') {
+          if (opt && opt.logLevel !== 'warn') {
             console.log(finalMessage.green);
           }
         } else {
