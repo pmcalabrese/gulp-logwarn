@@ -24,7 +24,7 @@
   "author": "Pachito Marco Calabrese <pm.calabrese@gmail.com>",
   "license": "BSD",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/pmcalabrese/gulp-logwarn/issues"
   },
   "repository": {
     "type": "git",
