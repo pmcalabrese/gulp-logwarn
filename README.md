@@ -40,14 +40,14 @@ gulp.task('logwarn', function(){
 
 gulp.task('logwarn', function(){
 	gulp.src(appJs)
-		.pipe(logwarn(['console.debug,console.dir']));
+		.pipe(logwarn(['console.debug', 'console.dir']));
 });
 
 // If you want to change the log level you can pass an object like so
 
 gulp.task('logwarn', function(){
 	gulp.src(appJs)
-		.pipe(logwarn(['console.debug,console.dir'], {
+		.pipe(logwarn(['console.debug', 'console.dir'], {
 			logLevel: 'warn' // or 'info'
 		}));
 });
