@@ -36,10 +36,10 @@ module.exports = function(subString, opt) {
         var finalMessage = file.path+" ("+m+")\n" + message;
         if (m === 0) {
           if (opt && opt.logLevel !== 'warn') {
-            console.log(finalMessage.green);
+            console.log(finalMessage[opt.color || 'green']);
           }
         } else {
-          console.log(finalMessage.red);
+          console.log(finalMessage[opt.color || 'red']);
         }
         message = "";
         cb(null,file);

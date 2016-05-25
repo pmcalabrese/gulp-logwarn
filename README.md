@@ -64,6 +64,20 @@ run it with ```gulp logwarn``` and it will produce as output
 
 Set `logLevel` to either `'warn'` or `'info'` to change what gets printed to the console. Using `'warn'` will only print messages for files that contain a `console.log`, whereas using `'info'` will print information for all files passed in regardless of whether there are any `console.log`s in that file.
 
+### `color` [optional]
+
+You can choose to override the color of the warning or info messages with `color`. The  colors available are:
+- black
+- red
+- green
+- yellow
+- blue
+- magenta
+- cyan
+- white
+- gray
+- grey
+
 ## TODO
 
 - tests
