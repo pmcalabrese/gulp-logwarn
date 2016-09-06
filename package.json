@@ -1,6 +1,6 @@
 {
   "name": "gulp-logwarn",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A plugin that check if you left debug code",
   "main": "index.js",
   "dependencies": {
@@ -11,10 +11,11 @@
     "test": "./node_modules/.bin/mocha"
   },
   "keywords": [
+    "gulp",
     "gulpplugin",
     "console log warning",
     "check debug code",
-    "configurable plugin"
+    "configurable"
   ],
   "author": "Pachito Marco Calabrese <pm.calabrese@gmail.com>",
   "license": "BSD",
