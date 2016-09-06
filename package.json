@@ -4,7 +4,7 @@
   "description": "A plugin that check if you left debug code",
   "main": "index.js",
   "dependencies": {
-    "event-stream": "~3.3.2",
+    "event-stream": "~3.3.4",
     "colors": "~1.1.2"
   },
   "scripts": {
