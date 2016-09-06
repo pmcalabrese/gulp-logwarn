@@ -4,6 +4,7 @@ var colors = require('colors');
 module.exports = function(subString, opt) {
 
   var substrings = typeof subString === "undefined" ? [] : subString;
+  opt = opt || {};
 
   function occurrences(file,cb){
 
